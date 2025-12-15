@@ -18,3 +18,9 @@ note: you can reset to factory settings by sending "AT+FACTORY"
 * set the baud rate to 115200
 * Send "AT" and both modules should respond "ok". if using ArduinoIDE and you send by typing on the serial monitor, then make sure "Both NL & CR" are selected otherwise it will return "+ERR=1" which means there was not "enter" after the AT command.
 * lets say both are on address 0, to send a data (max 240 bytes) type "AT+SEND=0,5,hello" (send to address=0, dataLength=5, and data=hello) and the other will output "+RCV=0,5,hello,0,11" which means is received from a device with address 0, dataLength=5, data=hello, RSSI=0dBm, SNR=11.
+
+# connection diagram for RYLR998 with USB to UART with level shifter module
+![Alt text](images/connection_with_usbToUart_and_level_shifter_module_cp2102.jpg)
+
+# connection diagram for RYLR998 with USB to UART CP2102 module
+![Alt text](images/connection_with_usb_to_uart_cp2102_module.jpg)
