@@ -2,12 +2,12 @@
 This repo contains all the basics and resources for the RYLR998 and RYLR498 modules via uart and AT commands
 
 # Important notes:
-> The modules works by directly sending AT commands via its RX TX terminal at a default baudrate of 115200.
+< The modules works by directly sending AT commands via its RX TX terminal at a default baudrate of 115200.>
 > The connection diagram are attached in the same repository. It does not require any additional hardware/MCU while sending data directly through terminal.
-> The address number(0~65535) is what defines a module on a network group. it can adjusted by sending "AT+ADDRESS=<number>" through the terminal and it will keep it stored on its memory.
+> The address number(0 to 65535) is what defines a module on a network group. it can adjusted by sending "AT+ADDRESS=<number>" through the terminal and it will keep it stored on its memory.
 > The networkID is very important as it is a group function and only the modules with the same networkID are allowed to communicate to each other. i.e a module with networkID 18 cannot send or received data with another module with networkID 15 even with same address.
 It is useful to create a mesh of networks.
-The default networkID(3~15,and 18) is 18 and it can be changed by sending "AT+NETWORKID=15"
+The default networkID(3 to 15,and 18) is 18 and it can be changed by sending "AT+NETWORKID=15"
 > you can reset and set every parameters to default factory values by sending "AT+FACTORY" and it will respond "+FACTORY"
 
 # Basic test
